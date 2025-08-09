@@ -3,7 +3,7 @@ import * as d3 from "d3";
 
 import { utcParse } from './formats';
 
-const fetchData = async (token, type, start, end) => {
+export const fetchData = async (token, type, start, end) => {
   try {
     const response = await axios.get(`http://localhost:9000/?name=${token[0]}&token=${token[1]}&type=${type}&start=${start}&end=${end}`);
 
